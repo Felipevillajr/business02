@@ -1,18 +1,37 @@
 import React from "react";
 import "./header.scss";
-import banner from "../../images/imaginethat.jpg";
+import { Link } from "react-router-dom";
 
 function header() {
   return (
     <div className="header">
-      <img className="header__img" src={banner} alt="placeholder"></img>
-      <div className="header__filter"></div>
-      <h1 className="header__title">X-8</h1>
-      <section className="header__menu">
-        <h1 className="header__menu__item">home</h1>
-        <h1 className="header__menu__item">about</h1>
-        <h1 className="header__menu__item">shop</h1>
-      </section>
+      <div className="header__filter">
+        <section className="header__menu">
+          <div className="header__menu__left">
+            <div className="header__menu__left__logo">LOGO</div>
+
+            <div className="header__menu__left__link">
+              <Link to="#">LINK 1</Link>
+            </div>
+            <div className="header__menu__left__link">
+              <Link to="#">LINK 1</Link>
+            </div>
+            <div className="header__menu__left__link">
+              <Link to="#">LINK 1</Link>
+            </div>
+            <div className="header__menu__left__link">
+              <Link to="#">LINK 1</Link>
+            </div>
+          </div>
+          <div className="header__menu__right">
+            <input
+              type="text"
+              className="header__menu__right__searchbar"
+              placeholder="Search..."
+            ></input>
+          </div>
+        </section>
+      </div>
     </div>
   );
 }
